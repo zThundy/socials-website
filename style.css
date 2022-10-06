@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Chibolddemo';
+    src: url('fonts/Chibolddemo.ttf'); /* IE9 Compat Modes */
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    font-family: 'Chibolddemo', Fallback, sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+/* make a solid color background with stripes on top */
+body {
+    overflow-x: hidden;
+    background: rgb(122, 177, 135);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+.first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 350px;
+    background-color: rgb(92, 136, 103);
+    z-index: -1;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 60%, 20% 50%, 100% 100%, 100% 0%);
+}
+
+.second {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 300px;
+    background-color: rgb(50, 121, 68);
+    z-index: -1;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 50%, 40% 40%, 100% 90%, 100% 0%);
+}
+
+#pfp {
+    transition: all 0.1s ease-in-out;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#pfp:hover {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease-in-out;
+    width: 150px;
+    height: 150px;
+}
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+    margin-top: 25px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.button i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: rgb(83, 139, 96);
+    transition: all 0.2s ease;
+}
+
+.button span {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgb(83, 139, 96);
+    transition: all 0.2s ease;
+}
+
+/* make the button change size depending on the window size */
+.buttons-container > .button {
+    width: calc(50% - 10px);
+}
+
+@media only screen and (max-width: 1200px) {
+    .buttons-container > .button {
+        width: 80%;
+    }
+
+    .button:hover span {
+        transition: all 0.2s ease;
+        opacity: 1;
+        color: rgb(38, 124, 59);
+        left: 60%;
+    }
+    
+    .button:hover i {
+        left: 35%;
+        color: rgb(38, 124, 59);
+        transition: all 0.2s ease;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .button:hover span {
+        transition: all 0.2s ease;
+        opacity: 1;
+        color: rgb(38, 124, 59);
+        left: 55%;
+    }
+
+    .button:hover i {
+        left: 45%;
+        color: rgb(38, 124, 59);
+        transition: all 0.2s ease;
+    }
+}
+
+/* add an external shadow when hovering the .button */
+.button:hover {
+    transition: all 0.2s ease;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.gundiv {
+    cursor: pointer;
+    margin-top: 100px;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gundiv:hover {
+    opacity: 1;
+    transition: all 0.1s ease-in-out;
+}
+
+.gun {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gunspan {
+    transition: all 0.1s ease-in-out;
+    color: black;
+}

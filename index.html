@@ -1,0 +1,97 @@
+<head>
+    <title>Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="memes.css">
+    <script src="https://kit.fontawesome.com/2656c82e02.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="first"></div>
+    <div class="second"></div>
+
+    <div class="buttons-container">
+        <img id="pfp" src="images/pfp.png">
+        <div class="button" onclick="press('twitch')">
+            <i class="fab fa-twitch"></i>
+            <span>TWITCH</span>
+        </div>
+        <div class="button" onclick="press('twitter')">
+            <i class="fab fa-twitter"></i>
+            <span>TWITTER</span>
+        </div>
+        <div class="button" onclick="press('github')">
+            <i class="fab fa-github"></i>
+            <span>GITHUB</span>
+        </div>
+        <div class="button" onclick="press('discord')">
+            <i class="fab fa-discord"></i>
+            <span>DISCORD</span>
+        </div>
+        <div class="button" onclick="press('tiktok')">
+            <i class="fab fa-tiktok"></i>
+            <span>TIKTOK</span>
+        </div>
+        <div class="button" onclick="press('youtube')">
+            <i class="fab fa-youtube"></i>
+            <span>YOUTUBE</span>
+        </div>
+
+        <div class="gundiv" onclick="press('camera')">
+            <img class="gun" src="images/gun.png">
+            <span class="gunspan">HEY CHECK OUT MY NEW CAMERA</span>
+            <span class="gunspan">WAIT THIS ISN'T MY CAMERA</span>
+        </div>
+    </div>
+
+    <script>
+        var press = function (button) {
+            switch(button) {
+                case "twitch":
+                    window.open("https://twitch.tv/zThundy__", "_blank");
+                    break;
+                case 'twitter':
+                    window.open('https://twitter.com/zThundy__', '_blank');
+                    break;
+                case "github":
+                    window.open('https://github.com/zThundy', '_blank');
+                    break;
+                case "discord":
+                    window.open('https://discord.gg/JMkgfG2pK8', '_blank');
+                    break;
+                case "tiktok":
+                    window.open('https://www.tiktok.com/@zthundy', '_blank');
+                    break;
+                case "youtube":
+                    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+                    break;
+                case "camera":
+                    window.open("https://youtu.be/oY6tCnu-1Do?t=71", "_blank");
+                    break;
+            }
+        }
+
+        var index = 0;
+        const myDiv = document.getElementById('pfp');
+        myDiv.setAttribute('draggable', false);
+        document.addEventListener('mouseover', (e) => {
+            if (e.srcElement.id === "pfp") index++;
+            if (index === 10) {
+                index = 0;
+                myDiv.setAttribute('src', 'images/cat.png');
+                setTimeout(() => {
+                    myDiv.setAttribute('src', 'images/pfp.png');
+                    index = 0;
+                }, 2000);
+            }
+        });
+
+        const params = new Proxy(new URLSearchParams(window.location.search), { get: (searchParams, prop) => searchParams.get(prop) });
+        if (params.egg === "barrelroll" || params.egg === "zoomies") {
+            document.body.classList.add(params.egg);
+        }
+
+        // let details = navigator.userAgent;
+        // let regexp = /android|iphone|kindle|ipad/i;
+        // let isMobileDevice = regexp.test(details);
+    </script>
+</body>
