@@ -30,6 +30,7 @@
 /* make a solid color background with stripes on top */
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
     background: rgb(122, 177, 135);
     left: 0;
     top: 0;
