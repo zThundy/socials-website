@@ -1,7 +1,3 @@
-new Twitch.Player("twitch-embed", {
-    channel: "zthundy__"
-});
-
 var press = function (button) {
     switch(button) {
         case "twitch":

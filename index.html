@@ -5,9 +5,7 @@
     <link rel="stylesheet" href="css/memes.css">
     <link rel="stylesheet" href="css/expand.css">
     <script src="https://kit.fontawesome.com/2656c82e02.js" crossorigin="anonymous"></script>
-    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
     <link rel="icon" href="images/favicon.png">
-
 </head>
 
 <body>
@@ -18,7 +16,7 @@
         <img id="pfp" src="images/pfp.png">
         <div id="twitch" class="button" onclick="expand('twitch')">
             <i id="twitch-i" class="fab fa-twitch"></i>
-            <div id="twitch-embed"></div>
+            <iframe id="twitch-embed" style="display: none;" src="https://player.twitch.tv/?channel=zthundy__&parent=zthundy.online" frameborder="1" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
             <span id="twitch-text">TWITCH</span>
         </div>
         <div class="button" onclick="press('twitter')">
