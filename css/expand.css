@@ -1,0 +1,22 @@
+.expanded {
+    transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
+
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#twitch-embed {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 50%;
+}

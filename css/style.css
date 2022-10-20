@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Chibolddemo';
+    src: url('../fonts/Chibolddemo.ttf'); /* IE9 Compat Modes */
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    font-family: 'Chibolddemo', Fallback, sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+/* make a solid color background with stripes on top */
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: rgb(122, 177, 135);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+.first {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 350px;
+    background-color: rgb(92, 136, 103);
+    z-index: -1;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 60%, 20% 50%, 100% 100%, 100% 0%);
+}
+
+.second {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 300px;
+    background-color: rgb(50, 121, 68);
+    z-index: -1;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 50%, 40% 40%, 100% 90%, 100% 0%);
+}
+
+#pfp {
+    transition: all 0.1s ease-in-out;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#pfp:hover {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease-in-out;
+    width: 150px;
+    height: 150px;
+}
