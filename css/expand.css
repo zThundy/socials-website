@@ -5,7 +5,7 @@
     -o-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
 
-    height: 550px;
+    height: 600px;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -41,6 +41,8 @@
 }
 
 #twitch-embed {
+    border-radius: 30px;
+    border: 1px solid #ffffff;
     width: 90%;
     height: 90%;
     margin-top: 5%;
