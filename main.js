@@ -38,16 +38,16 @@ var expand = function(index) {
 
             if (expanded[index]) {
                 elem.classList.add("expanded");
-                icon.style = "display: none;";
-                text.style = "display: none;";
+                icon.classList.add("hidden");
+                text.classList.add("hidden");
                 setTimeout(() => {
-                    iframe.style = "display: block;";
+                    iframe.classList.remove("hidden"); 
                 }, 100)
             } else {
                 elem.classList.remove("expanded");
-                iframe.style = "display: none;";
-                icon.style = "display: block;";
-                text.style = "display: block;";
+                iframe.classList.add("hidden");
+                icon.classList.remove("hidden");
+                text.classList.remove("hidden");
             }
             break;
     }

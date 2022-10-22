@@ -8,6 +8,7 @@
 }
 
 .button {
+    background-color: rgb(87, 143, 101);
     justify-content: center;
     align-items: center;
     transition: all 0.2s ease;
@@ -25,7 +26,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 40px;
-    color: rgb(83, 139, 96);
+    color: rgb(30, 95, 45);
     transition: all 0.2s ease;
 }
 
@@ -36,7 +37,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-    color: rgb(83, 139, 96);
+    color: rgb(30, 95, 45);
     transition: all 0.2s ease;
 }
 
@@ -53,13 +54,13 @@
     .button:hover span {
         transition: all 0.2s ease;
         opacity: 1;
-        color: rgb(38, 124, 59);
+        color: rgb(0, 100, 23);
         left: 60%;
     }
     
     .button:hover i {
         left: 35%;
-        color: rgb(38, 124, 59);
+        color: rgb(0, 100, 23);
         transition: all 0.2s ease;
     }
 }
@@ -68,13 +69,13 @@
     .button:hover span {
         transition: all 0.2s ease;
         opacity: 1;
-        color: rgb(38, 124, 59);
+        color: rgb(0, 100, 23);
         left: 55%;
     }
 
     .button:hover i {
         left: 40%;
-        color: rgb(38, 124, 59);
+        color: rgb(0, 100, 23);
         transition: all 0.2s ease;
     }
 }
