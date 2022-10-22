@@ -60,7 +60,7 @@ document.addEventListener('mouseover', (e) => {
     if (e.srcElement.id === "pfp") index++;
     if (index === 10) {
         index = 0;
-        myDiv.setAttribute('src', 'images/cat.png');
+        myDiv.setAttribute('src', 'images/catmeme.png');
         setTimeout(() => {
             myDiv.setAttribute('src', 'images/pfp.png');
             index = 0;
