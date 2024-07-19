@@ -1,38 +1,37 @@
 @font-face {
-    font-family: 'Chibolddemo';
-    src: url('../fonts/Chibolddemo.ttf'); /* IE9 Compat Modes */
+
 }
 
 * {
-    margin: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    font-family: 'Chibolddemo', Fallback, sans-serif;
+  margin: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  font-family: sans-serif;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    display: none;
+  display: none;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    display: none;
+  display: none;
 }
 
 body {
-    overflow-x: hidden;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background: rgb(135, 177, 145);
-    height: fit-content;
+  overflow-x: hidden;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgb(135, 177, 145);
+  height: fit-content;
 }

@@ -5,11 +5,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/modal.css">
     <script src="https://kit.fontawesome.com/2656c82e02.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/favicon.png">
 </head>
 
 <body>
+    <div class="modal" id="modal">
+        <div class="content" id="modal-content">
+            <div class="header">
+                <h2 id="modal-title">%title%</h2>
+                <span class="close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+            <div class="divider">
+                <hr>
+            </div>
+            <div class="body">
+                <p id="modal-body">%body%</p>
+            </div>
+        </div>
+    </div>
+
     <div class="sidebar">
         <div class="image">
             <img src="images/pfp.png">
