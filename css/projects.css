@@ -8,7 +8,7 @@
 }
 
 .project .image img {
-  border-radius: 0rem;
+  border-radius: 1rem;
   margin: 0 1rem;
 }
 
@@ -40,4 +40,23 @@
   cursor: not-allowed;
   background-color: #002000;
   color: #335a32;
+}
+
+@media screen and (max-width: 930px) {
+  .project {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project .info .buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+  }
+
+  .project .info .buttons button {
+    margin: 0 0 1rem 0;
+  }
 }

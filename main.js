@@ -66,6 +66,14 @@ window.onload = function () {
         "project4": [
             "https://github.com/zThundy/src_htmlPhone",
             "https://fivem.net/"
+        ],
+        "project5": [
+            "https://github.com/zThundy/discordbot-socials",
+            "https://discord.com/developers/docs/intro"
+        ],
+        "project6": [
+            "https://github.com/zThundy/qrcode-api",
+            false
         ]
     }
 
