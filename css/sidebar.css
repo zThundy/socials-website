@@ -20,10 +20,12 @@
   align-items: center;
 }
 
-.image img {
+.sidebar .image img {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
+  /* do not fit image to container */
+  object-fit: cover;
 }
 
 .sidebar .elem {
