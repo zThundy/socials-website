@@ -41,3 +41,36 @@
 .sidebar .elem:hover {
   color: #f1f1f1;
 }
+
+@media screen and (max-width: 750px) {
+  .sidebar {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    border-right: none;
+    text-align: center;
+  }
+
+  .sidebar .image {
+    display: none;
+  }
+
+  .sidebar .elem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+    gap: .5rem;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .sidebar .elem span {
+    display: none;
+  }
+}

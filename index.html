@@ -13,14 +13,17 @@
     <script src="libs/jquery.js"></script>
 
     <script>
-        const files = [ "home", "about" ]
-        // read all files from content folder with plain js not nodejs
+        let loaded = false;
+
         $(function () {
             var includes = $('[data-include]')
             $.each(includes, function () {
                 var file = 'views/' + $(this).data('include') + '.html'
                 $(this).load(file)
+                console.log("done", file)
             })
+
+            loaded = true;
         })
     </script>
 </head>
@@ -72,107 +75,19 @@
     <div class="content">
         <section id="home">
             <h1>Home</h1>
+            <div class="divider"></div>
             <div data-include="home"></div>
         </section>
 
         <section id="about">
             <h1>About</h1>
+            <div class="divider"></div>
             <div data-include="about"></div>
         </section>
 
         <section id="projects">
             <h1>Projects</h1>
-            <div class="project">
-                <div class="image">
-                    <img src="images/project1.png">
-                </div>
-                <div class="info">
-                    <h2>Echo Project</h2>
-                    <p>Discord-like app made open-source using Electron and React!</p>
-                    <p>Our goal is to bring the simplicity of Discord, and merge it with the self-hosted nature of TeamSpeak, while keeping everything open-source.</p>
-                    <div class="buttons">
-                        <button class="pbtn" data-id="project1" data-type="0">Repository</button>
-                        <button class="pbtn" data-id="project1" data-type="1" disabled>More info</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="image">
-                    <img src="images/project2.png">
-                </div>
-                <div class="info">
-                    <h2>Clipmaner</h2>
-                    <p>Clipmaner is a website made using NextJS and React to let streamers download their content easly and in bulk</p>
-                    <p>The project is open source and is hosted on clipmaner.com</p>
-                    <div class="buttons">
-                        <button class="pbtn" data-id="project2" data-type="0">Repository</button>
-                        <button class="pbtn" data-id="project2" data-type="1">More Info</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="image">
-                    <img src="images/project3.png">
-                </div>
-                <div class="info">
-                    <h2>GuessTheSong</h2>
-                    <p>GuessTheSong is a Proof of concept for a minigame website. The goal was to make a pleasing and modern for the eyes websitte where players had to guess the song that was playing. The fastest would earn points that would have been counted at the end of a match</p>
-                    <p>The project is open source but it never became a thing since the decision of moving everything to SSR with NextJS, forcing then a rewrite of most of the code.</p>
-                    <div class="buttons">
-                        <button class="pbtn" data-id="project3" data-type="0">Repository</button>
-                        <button class="pbtn" data-id="project3" data-type="1" disabled>More Info</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="image">
-                    <img src="images/project4.png">
-                </div>
-                <div class="info">
-                    <h2>zTh_Phone</h2>
-                    <p>zTh_Phone is a resource that I made for a GTA5 mod, called FiveM.</p>
-                    <p>This mod for the game makes modding GTA5 simple, expetially for multiplayer, and it's very famous for it's RP community</p>
-                    <p>I made this mod almost 4 years ago, and it's purpouse was to emulate an actual Phone, so that players can communicate and use different apps.</p>
-                    <p>The project is long dead, but this helped me learn about VUEjs and JS web in general, both client and server side.</p>
-                    <div class="buttons">
-                        <button class="pbtn" data-id="project4" data-type="0">Repository</button>
-                        <button class="pbtn" data-id="project4" data-type="1">More Info</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="image">
-                    <img src="images/project5.png">
-                </div>
-                <div class="info">
-                    <h2>DiscordBot-Socials</h2>
-                    <p>DiscordBot-Socials is an application that interfaces with Discord's API, commonly known as BOT.</p>
-                    <p>This bot tryes to make administration and customization of a Discord Guild easier, adding different funtionalities to a discord server, like role selector, twitch live stream announcement, and more.</p>
-                    <div class="buttons">
-                        <button class="pbtn" data-id="project5" data-type="0">Repository</button>
-                        <button class="pbtn" data-id="project5" data-type="1">More Info</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="image">
-                    <img src="images/project6.png">
-                </div>
-                <div class="info">
-                    <h2>QRCode API</h2>
-                    <p>This is the first API I made for a friend's project.</p>
-                    <p>Putting it very simple, this API let's you make QRCodes. Made with express and ejs to give both a Web page as a response, and an API response.</p>
-                    <div class="buttons">
-                        <button class="pbtn" data-id="project5" data-type="0">Repository</button>
-                        <button class="pbtn" data-id="project5" data-type="1" disabled>More Info</button>
-                    </div>
-                </div>
-            </div>
+            <div data-include="projects"></div>
         </section>
     </div>
 

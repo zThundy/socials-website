@@ -11,3 +11,28 @@
 .content section {
   margin: 2rem 0 2rem 0;
 }
+
+.content section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.divider {
+  border-bottom: 1px solid #002000;
+  margin: .2rem 0 1rem 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 930px) {
+  .content {
+    width: calc(100% - 16rem);
+    margin-left: 15rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .content {
+    width: 90%;
+    margin: 3rem auto 0 auto;
+  }
+}
