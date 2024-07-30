@@ -32,4 +32,22 @@ window.onload = async function () {
             console.error("Element not found");
         }
     });
+
+    $(".contact").click(function (e) {
+        try {
+            let data = e.target.dataset;
+            if (!data.url) data = e.target.parentElement.dataset;
+
+            console.log(data);
+            console.log(typeof data.blank);
+
+            if (data && data.url) {
+                const isB = data.blank === "true" ? "_blank" : null;
+                console.log(isB);
+                window.open(data.url, isB);
+            }
+        } catch (e) {
+            console.error("Element not found");
+        }
+    });
 }
