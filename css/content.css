@@ -23,6 +23,10 @@
   width: 100%;
 }
 
+.little {
+  font-size: .8rem;
+}
+
 @media screen and (max-width: 930px) {
   .content {
     width: calc(100% - 16rem);

@@ -38,6 +38,25 @@
   cursor: pointer;
 }
 
+.sidebar .elem button {
+  background-color: #007200;
+  color: #f1f1f1;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 1rem;
+
+  /* add inner shadow */
+  box-shadow: inset 0rem 0rem 1.5rem #00a700;
+}
+
+.sidebar .elem button:hover {
+  background-color: #00a700;
+  box-shadow: inset 0rem 0rem 1.5rem #007200;
+}
+
 .sidebar .elem:hover {
   color: #f1f1f1;
 }
@@ -66,6 +85,10 @@
     margin: 0 auto;
     gap: .5rem;
     flex-direction: row;
+  }
+
+  .sidebar .elem button {
+    display: none;
   }
 }
 

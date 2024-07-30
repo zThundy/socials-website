@@ -1,6 +1,6 @@
-@font-face {
+/* @font-face {
 
-}
+} */
 
 * {
   margin: 0;
@@ -34,4 +34,15 @@ body {
   width: 100%;
   background: rgb(135, 177, 145);
   height: fit-content;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(127, 255, 157);
+}
+
+a:hover {
+  transition: .1s;
+  color: rgb(192, 255, 207);
+  text-decoration: underline dotted;
 }

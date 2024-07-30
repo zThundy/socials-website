@@ -50,4 +50,37 @@ window.onload = async function () {
             console.error("Element not found");
         }
     });
+
+    let grandpa = false
+    $(".sidebar-button").click(function (e) {
+        try {
+            const data = e.target.dataset;
+            if (data && data.type) {
+                switch (data.type) {
+                    case "modal":
+                        openModal("Test modal", "I was bored so I made a modal system, it's useless but it works.");
+                        break;
+                    case "grandpa":
+                        if (grandpa) {
+                            // change font-size of .content css class
+                            $(".content").css("font-size", "20px");
+                            // change text of button
+                            e.target.innerHTML = "Grandpa Mode: <span style='color: red;'>Off</span>";
+                        } else {
+                            // change font-size of .content css class
+                            $(".content").css("font-size", "30px");
+                            // change text of button
+                            e.target.innerHTML = "Grandpa Mode: <span style='color: green;'>On</span>";
+                        }
+                        grandpa = !grandpa;
+                        break;
+                    default:
+                        console.warn("Type not found");
+                        break;
+                }
+            }
+        } catch (e) {
+            console.error("Element not found");
+        }
+    });
 }
