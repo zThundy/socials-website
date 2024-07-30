@@ -68,9 +68,9 @@ window.onload = async function () {
                             e.target.innerHTML = "Grandpa Mode: <span style='color: red;'>Off</span>";
                         } else {
                             // change font-size of .content css class
-                            $(".content").css("font-size", "30px");
+                            $(".content").css("font-size", "40px");
                             // change text of button
-                            e.target.innerHTML = "Grandpa Mode: <span style='color: green;'>On</span>";
+                            e.target.innerHTML = "Grandpa Mode: <span style='color: greenyellow;'>On</span>";
                         }
                         grandpa = !grandpa;
                         break;
